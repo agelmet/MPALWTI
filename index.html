@@ -44,6 +44,7 @@
                         'glow-teal': '0 0 30px -5px rgba(1, 97, 113, 0.2)',
                         'glow-cyan': '0 0 40px -5px rgba(18, 234, 234, 0.5)',
                         'premium': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                        'cyan-strong': '0 0 50px -5px rgba(0, 229, 255, 0.6)',
                     },
                     animation: {
                         'hero-zoom': 'hero-zoom 25s ease-out forwards',
@@ -126,14 +127,9 @@
 <body class="bg-brand-dark text-gray-950 font-sans antialiased overflow-x-hidden selection:bg-brand-turquoise selection:text-white">
 
     <header class="fixed top-0 left-0 w-full z-50 p-6 md:p-10 pointer-events-none flex justify-between items-start mix-blend-difference text-white">
-        <a href="#" class="pointer-events-auto flex items-center gap-4 group">
-            <div class="w-12 h-12 rounded-full overflow-hidden border border-white/30 group-hover:border-brand-turquoise transition-colors duration-500 shadow-premium">
-                <img src="https://github.com/agelmet/MPALWTI/blob/main/2023-03-22.jpg?raw=true" alt="Μαρία Μπαλωτή" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-            </div>
-            <div class="flex flex-col">
-                <span class="text-lg font-serif font-bold tracking-wide text-white">Μαρία Μπαλωτή</span>
-                <span class="text-[10px] font-bold tracking-[0.2em] text-white/70 group-hover:text-brand-turquoise transition-colors">ΨΥΧΟΛΟΓΟΣ MA.</span>
-            </div>
+        <a href="#" class="pointer-events-auto flex flex-col group">
+            <span class="text-2xl font-serif font-bold tracking-wide text-white">Μαρία Μπαλωτή</span>
+            <span class="text-[10px] font-bold tracking-[0.2em] text-white/70 group-hover:text-brand-turquoise transition-colors">ΨΥΧΟΛΟΓΟΣ MA.</span>
         </a>
 
         <button id="menu-trigger" class="pointer-events-auto flex items-center gap-3 group bg-transparent border-none outline-none">
@@ -188,7 +184,7 @@
         <div class="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent z-10"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent z-10 hidden md:block"></div>
 
-        <svg class="absolute bottom-20 right-0 w-2/3 h-auto opacity-30 pointer-events-none z-10 animate-float" style="animation-delay: -3s;" viewBox="0 0 600 200" fill="none">
+        <svg class="absolute bottom-20 right-0 w-2/3 h-auto opacity-30 pointer-events-none z-10 animate-float" viewBox="0 0 600 200" fill="none">
             <path d="M0 100 C 200 0, 400 200, 650 50" stroke="#00E5FF" stroke-width="1.5" fill="none"/>
         </svg>
 
@@ -261,7 +257,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-turquoise/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-brand-turquoise/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -280,7 +276,7 @@
                     </div>
                 </div>
 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal reveal-delay-1 cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal reveal-delay-1 cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-brand-cyan/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -299,7 +295,7 @@
                     </div>
                 </div>
 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-[#00f2fe] transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-[#00f2fe] transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-[#00f2fe]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-[#00f2fe]/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -318,7 +314,7 @@
                     </div>
                 </div>
 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-teal transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal reveal-delay-1 cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-teal transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal reveal-delay-1 cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-brand-teal/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -431,7 +427,7 @@
         <button class="absolute top-6 right-6 text-gray-950 hover:text-brand-turquoise transition-colors z-50">
             <i data-lucide="x" class="w-10 h-10"></i>
         </button>
-        <img id="lightbox-img" src="" alt="View" class="max-w-[95vw] max-h-[95vh] object-contain rounded-md shadow-glow-cyan cursor-default" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" alt="View" class="max-w-[95vw] max-h-[95vh] object-contain rounded-md shadow-cyan-strong cursor-default" onclick="event.stopPropagation()">
     </div>
 
     <section class="py-24 bg-brand-dark overflow-hidden border-t border-gray-100 relative">
@@ -600,10 +596,8 @@
     </footer>
 
     <script>
-        // Initialize Icons!
         lucide.createIcons();
     
-        // Fullscreen Menu Logic
         const menuTrigger = document.getElementById('menu-trigger');
         const closeMenuBtn = document.getElementById('close-menu');
         const fullscreenMenu = document.getElementById('fullscreen-menu');
@@ -623,7 +617,6 @@
         closeMenuBtn.addEventListener('click', closeMenu);
         menuLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-        // Intersection Observer for Scroll Reveals
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -643,7 +636,6 @@
             observer.observe(el);
         });
 
-        // Custom Vanilla JS 3D Tilt Effect for Service Cards
         const tiltCards = document.querySelectorAll('.tilt-card');
         
         tiltCards.forEach(card => {
@@ -671,7 +663,6 @@
             });
         });
 
-        // Lightbox Functionality
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
