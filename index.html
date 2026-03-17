@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
         tailwind.config = {
@@ -26,12 +28,12 @@
                         brand: {
                             teal: '#016171',
                             tealDark: '#013a44',
-                            turquoise: '#00E5FF', /* Bright new accent */
-                            cyan: '#12EAEA', /* Bright glowing effect */
+                            turquoise: '#00E5FF', 
+                            cyan: '#12EAEA', 
                             lavender: '#e4cfe8',
-                            dark: '#f8fafc', /* Light bright surface */
-                            surface: '#ffffff', /* Pure white surface */
-                            graySubtle: '#f1f5f9' /* Light surface contrast */
+                            dark: '#f8fafc', 
+                            surface: '#ffffff', 
+                            graySubtle: '#f1f5f9' 
                         }
                     },
                     fontFamily: {
@@ -47,7 +49,6 @@
                         'hero-zoom': 'hero-zoom 25s ease-out forwards',
                         'float': 'float 8s ease-in-out infinite',
                         'marquee': 'marquee 40s linear infinite',
-                        'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         'hero-zoom': {
@@ -61,10 +62,6 @@
                         marquee: {
                             '0%': { transform: 'translateX(0%)' },
                             '100%': { transform: 'translateX(-50%)' },
-                        },
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: 1, filter: 'brightness(1)' },
-                            '50%': { opacity: .8, filter: 'brightness(1.5)' },
                         }
                     }
                 }
@@ -85,10 +82,10 @@
             letter-spacing: 0.15em;
         }
 
-        /* Outline Text Effect for Massive Numbers on Light Surface */
+        /* Outline Text Effect */
         .text-outline {
             color: transparent;
-            -webkit-text-stroke: 1px rgba(1, 97, 113, 0.1); /* Lighter outline */
+            -webkit-text-stroke: 1px rgba(1, 97, 113, 0.1); 
             transition: all 0.5s ease;
         }
 
@@ -97,6 +94,7 @@
         .reveal.active { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
 
         /* Fullscreen Overlay Menu */
         #fullscreen-menu {
@@ -152,7 +150,7 @@
 
     <div id="fullscreen-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-2xl flex flex-col justify-center px-10 md:px-24">
         <button id="close-menu" class="absolute top-6 right-6 md:top-10 md:right-10 w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-brand-graySubtle hover:border-brand-turquoise transition-all text-gray-950 hover:text-brand-turquoise group shadow-inner">
-            <svg class="w-5 h-5 transform group-hover:rotate-90 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <i data-lucide="x" class="w-5 h-5 transform group-hover:rotate-90 transition-transform duration-500"></i>
         </button>
 
         <nav class="flex flex-col gap-6 md:gap-10 text-3xl md:text-6xl font-serif">
@@ -213,13 +211,12 @@
                     <a href="#contact" class="relative overflow-hidden group bg-brand-teal text-white px-10 py-5 rounded-full font-semibold text-sm tracking-wide transition-all hover:bg-brand-turquoise hover:text-brand-dark shadow-glow-teal hover:shadow-cyan">
                         <span class="relative z-10 flex items-center gap-2">
                             ΕΝΑΡΞΗ ΘΕΡΑΠΕΙΑΣ
-                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
                         </span>
                     </a>
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="about" class="py-32 px-6 bg-brand-surface relative border-t border-gray-100">
@@ -264,7 +261,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-turquoise/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-brand-turquoise/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -283,7 +280,7 @@
                     </div>
                 </div>
 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal reveal-delay-1 cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-turquoise transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal reveal-delay-1 cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-brand-cyan/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -302,7 +299,7 @@
                     </div>
                 </div>
 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-[#00f2fe] transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-[#00f2fe] transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-[#00f2fe]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-[#00f2fe]/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -321,7 +318,7 @@
                     </div>
                 </div>
 
-                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-teal transition-colors duration-500 hover:shadow-cyan-strong overflow-hidden reveal reveal-delay-1 cursor-pointer">
+                <div class="tilt-card relative w-full h-full bg-white rounded-3xl p-10 md:p-14 border border-gray-200 group hover:border-brand-teal transition-colors duration-500 hover:shadow-glow-cyan overflow-hidden reveal reveal-delay-1 cursor-pointer">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     
                     <div class="tilt-bg-number absolute -right-4 -bottom-10 text-[150px] font-black font-sans text-outline group-hover:text-brand-teal/10 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none leading-none select-none">
@@ -432,9 +429,9 @@
 
     <div id="lightbox" class="fixed inset-0 z-[100] bg-white/95 backdrop-blur-3xl flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
         <button class="absolute top-6 right-6 text-gray-950 hover:text-brand-turquoise transition-colors z-50">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <i data-lucide="x" class="w-10 h-10"></i>
         </button>
-        <img id="lightbox-img" src="" alt="View" class="max-w-[95vw] max-h-[95vh] object-contain rounded-md shadow-cyan-strong cursor-default" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" alt="View" class="max-w-[95vw] max-h-[95vh] object-contain rounded-md shadow-glow-cyan cursor-default" onclick="event.stopPropagation()">
     </div>
 
     <section class="py-24 bg-brand-dark overflow-hidden border-t border-gray-100 relative">
@@ -451,6 +448,7 @@
             
             <div class="marquee-wrapper animate-marquee">
                 <div class="flex space-x-6 px-3">
+                    
                     <div class="w-[350px] bg-white p-8 rounded-3xl border border-gray-200 shrink-0 hover:shadow-premium transition-all">
                         <div class="flex justify-between items-center mb-6">
                             <span class="font-bold text-brand-turquoise text-2xl font-serif">10.0</span>
@@ -534,6 +532,7 @@
                             <p class="text-xs text-brand-teal mt-1">07 Μαρτίου 2024</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -557,9 +556,11 @@
                     <h4 class="text-xs font-bold text-brand-teal mb-6 tracking-[0.2em] no-accents">ΕΠΙΚΟΙΝΩΝΙΑ</h4>
                     <ul class="space-y-4 text-gray-700 font-light">
                         <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-turquoise"></i>
                             <a href="tel:+306946977055" class="hover:text-brand-turquoise transition-colors text-xl font-medium">694 697 7055</a>
                         </li>
                         <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-turquoise"></i>
                             <a href="mailto:mariabaloti@gmail.com" class="hover:text-brand-turquoise transition-colors font-medium">mariabaloti@gmail.com</a>
                         </li>
                     </ul>
@@ -567,17 +568,23 @@
 
                 <div class="reveal reveal-delay-1">
                     <h4 class="text-xs font-bold text-brand-teal mb-6 tracking-[0.2em] no-accents">ΤΟΠΟΘΕΣΙΑ</h4>
-                    <p class="text-gray-700 font-light leading-relaxed font-medium">
-                        Δαρειώτου 4,<br>Κηφισιά, Αττική
-                    </p>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-brand-turquoise mt-0.5"></i>
+                        <p class="text-gray-700 font-light leading-relaxed font-medium">
+                            Δαρειώτου 4,<br>Κηφισιά, Αττική
+                        </p>
+                    </div>
                 </div>
 
                 <div class="reveal reveal-delay-2">
                     <h4 class="text-xs font-bold text-brand-teal mb-6 tracking-[0.2em] no-accents">ΩΡΑΡΙΟ & SOCIAL</h4>
-                    <p class="text-gray-700 font-light mb-6 font-medium">Δευτέρα - Σάββατο<br><span class="text-gray-950 font-semibold">Κατόπιν Ραντεβού</span></p>
+                    <div class="flex items-start gap-3 mb-6">
+                        <i data-lucide="clock" class="w-5 h-5 text-brand-turquoise mt-0.5"></i>
+                        <p class="text-gray-700 font-light font-medium">Δευτέρα - Σάββατο<br><span class="text-gray-950 font-semibold">Κατόπιν Ραντεβού</span></p>
+                    </div>
                     
-                    <a href="https://www.facebook.com/balotimaria/?locale=el_GR" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-gray-200 bg-white hover:border-brand-turquoise hover:text-brand-turquoise transition-colors shadow-premium hover:shadow-cyan text-brand-teal">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <a href="https://www.facebook.com/balotimaria/?locale=el_GR" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-gray-200 bg-white hover:border-brand-turquoise hover:text-brand-turquoise transition-colors shadow-premium hover:shadow-glow-cyan text-brand-teal">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
                     </a>
                 </div>
 
@@ -593,7 +600,7 @@
     </footer>
 
     <script>
-        // Lucide Icons initialization modified tilt shadow modified tilt color modified tilt text outline color modified tilt Card subtilte number color modified tilt subtilte color modified tilt text outlined modified for bright theme modified tilt shadow strengthened modified for bright theme modified
+        // Initialize Icons!
         lucide.createIcons();
     
         // Fullscreen Menu Logic
@@ -648,7 +655,7 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
                 
-                const rotateX = ((y - centerY) / centerY) * -10; // Max rotation 10deg
+                const rotateX = ((y - centerY) / centerY) * -10; 
                 const rotateY = ((x - centerX) / centerX) * 10;
                 
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
@@ -660,7 +667,7 @@
             });
             
             card.addEventListener('mouseenter', () => {
-                card.style.transition = 'none'; // remove transition for smooth tracking
+                card.style.transition = 'none'; 
             });
         });
 
